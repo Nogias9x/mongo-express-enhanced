@@ -19,6 +19,15 @@
     .CodeMirror {
       height: auto;
     }
+
+    .CodeMirror .CodeMirror-foldgutter-open, .CodeMirror .CodeMirror-foldgutter-folded {
+      color: red;
+      font-size: 20px;
+      line-height: 1;
+    }
+    .CodeMirror .CodeMirror-foldgutter-open {
+      opacity: 0.4;
+    }
   </style>
 {% endblock %}
 
@@ -153,6 +162,7 @@
 
 
 {% block scripts %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/addon/fold/foldgutter.css" />
 <script src="{{ baseHref }}{{ assets.codemirror.js }}"></script>
 <script src="{{ baseHref }}{{ assets.document.js }}"></script>
 {% endblock %}
